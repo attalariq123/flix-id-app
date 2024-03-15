@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "139899370854",
+    "project_id": "flix-id-cour",
+    "storage_bucket": "flix-id-cour.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139899370854:android:98927634b74be63eb59ca7",
+        "android_client_info": {
+          "package_name": "com.attasyah.flix_id"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRjIUYlFpNGGRYopv0jgTCkZQH0yfaw1g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
