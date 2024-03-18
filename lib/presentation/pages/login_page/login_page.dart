@@ -1,7 +1,5 @@
 // import 'package:flix_id/data/dummies/dummy_authentication.dart';
 // import 'package:flix_id/data/dummies/dummy_user_repository.dart';
-import 'package:flix_id/data/firebase/firebase_authentication.dart';
-import 'package:flix_id/data/firebase/firebase_user_repository.dart';
 import 'package:flix_id/domain/usecases/login/login.dart';
 import 'package:flix_id/presentation/pages/main_page/main_page.dart';
 import 'package:flix_id/presentation/providers/usecase/login_provider.dart';
