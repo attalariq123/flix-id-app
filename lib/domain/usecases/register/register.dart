@@ -24,7 +24,7 @@ class Register implements UseCase<Result<User>, RegisterParam> {
       var userResult = await _userRepository.createUser(
         uid: uidResult.resultValue!,
         email: params.email,
-        name: params.password,
+        name: params.name,
         photoUrl: params.photoUrl,
       );
 
