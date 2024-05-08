@@ -1,8 +1,8 @@
-import 'package:flix_id/presentation/extensions/build_context_extension.dart';
-import 'package:flix_id/presentation/misc/methods.dart';
-import 'package:flix_id/presentation/providers/router/router_provider.dart';
-import 'package:flix_id/presentation/providers/user_data/user_data_provider.dart';
-import 'package:flix_id/presentation/widgets/flix_text_field.dart';
+import '../../extensions/build_context_extension.dart';
+import '../../misc/methods.dart';
+import '../../providers/router/router_provider.dart';
+import '../../providers/user_data/user_data_provider.dart';
+import '../../widgets/flix_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

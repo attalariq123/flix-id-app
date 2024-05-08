@@ -1,8 +1,8 @@
-import 'package:flix_id/data/repositories/movie_repository.dart';
-import 'package:flix_id/domain/entities/actor.dart';
-import 'package:flix_id/domain/entities/result.dart';
-import 'package:flix_id/domain/usecases/get_actors/get_actors_param.dart';
-import 'package:flix_id/domain/usecases/usecase.dart';
+import '../../../data/repositories/movie_repository.dart';
+import '../../entities/actor.dart';
+import '../../entities/result.dart';
+import 'get_actors_param.dart';
+import '../usecase.dart';
 
 class GetActors implements UseCase<Result<List<Actor>>, GetActorsParam> {
   final MovieRepository _movieRepository;

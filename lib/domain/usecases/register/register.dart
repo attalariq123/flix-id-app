@@ -1,9 +1,9 @@
-import 'package:flix_id/data/repositories/authentication.dart';
-import 'package:flix_id/data/repositories/user_repository.dart';
-import 'package:flix_id/domain/entities/result.dart';
-import 'package:flix_id/domain/entities/user.dart';
-import 'package:flix_id/domain/usecases/register/register_param.dart';
-import 'package:flix_id/domain/usecases/usecase.dart';
+import '../../../data/repositories/authentication.dart';
+import '../../../data/repositories/user_repository.dart';
+import '../../entities/result.dart';
+import '../../entities/user.dart';
+import 'register_param.dart';
+import '../usecase.dart';
 
 class Register implements UseCase<Result<User>, RegisterParam> {
   final Authentication _authentication;

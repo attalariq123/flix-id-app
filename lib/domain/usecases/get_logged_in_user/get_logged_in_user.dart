@@ -1,8 +1,8 @@
-import 'package:flix_id/data/repositories/authentication.dart';
-import 'package:flix_id/data/repositories/user_repository.dart';
-import 'package:flix_id/domain/entities/result.dart';
-import 'package:flix_id/domain/entities/user.dart';
-import 'package:flix_id/domain/usecases/usecase.dart';
+import '../../../data/repositories/authentication.dart';
+import '../../../data/repositories/user_repository.dart';
+import '../../entities/result.dart';
+import '../../entities/user.dart';
+import '../usecase.dart';
 
 class GetLoggedInUser implements UseCase<Result<User>, void> {
   final Authentication _authentication;
