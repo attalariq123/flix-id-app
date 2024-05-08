@@ -1,7 +1,7 @@
-import 'package:flix_id/domain/entities/actor.dart';
-import 'package:flix_id/domain/entities/movie.dart';
-import 'package:flix_id/domain/entities/movie_detail.dart';
-import 'package:flix_id/domain/entities/result.dart';
+import '../../domain/entities/actor.dart';
+import '../../domain/entities/movie.dart';
+import '../../domain/entities/movie_detail.dart';
+import '../../domain/entities/result.dart';
 
 abstract interface class MovieRepository {
   Future<Result<List<Movie>>> getNowPlaying({int page = 1});

@@ -1,7 +1,7 @@
-import 'package:flix_id/data/repositories/transaction_repository.dart';
-import 'package:flix_id/domain/entities/result.dart';
-import 'package:flix_id/domain/usecases/create_transaction/create_transaction_param.dart';
-import 'package:flix_id/domain/usecases/usecase.dart';
+import '../../../data/repositories/transaction_repository.dart';
+import '../../entities/result.dart';
+import 'create_transaction_param.dart';
+import '../usecase.dart';
 
 class CreateTransaction
     implements UseCase<Result<void>, CreateTransactionParam> {
