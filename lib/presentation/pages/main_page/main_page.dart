@@ -1,3 +1,4 @@
+import 'package:flix_id/presentation/pages/movie_page/movie_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -38,7 +39,7 @@ class _MainPageState extends ConsumerState<MainPage> {
             }),
             children: const [
               Center(
-                child: Text('Movie Page'),
+                child: MoviePage(),
               ),
               Center(
                 child: Text('Ticket Page'),
