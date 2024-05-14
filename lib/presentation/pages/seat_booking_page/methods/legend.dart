@@ -1,5 +1,5 @@
-import 'package:flix_id/presentation/misc/methods.dart';
-import 'package:flix_id/presentation/widgets/seat.dart';
+import '../../../misc/methods.dart';
+import '../../../widgets/seat.dart';
 import 'package:flutter/material.dart';
 
 Widget legend() => Row(

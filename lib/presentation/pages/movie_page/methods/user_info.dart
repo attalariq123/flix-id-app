@@ -1,9 +1,9 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 import '../../../extensions/int_extension.dart';
 import '../../../misc/methods.dart';
 import '../../../providers/user_data/user_data_provider.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 Widget userInfo(WidgetRef ref) => Padding(
       padding: const EdgeInsets.fromLTRB(24, 24, 24, 0),

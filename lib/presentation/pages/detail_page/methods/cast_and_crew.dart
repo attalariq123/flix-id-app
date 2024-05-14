@@ -1,9 +1,10 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 import '../../../../domain/entities/movie.dart';
 import '../../../misc/methods.dart';
 import '../../../providers/movies/actors_provider.dart';
 import '../../../widgets/network_image_card.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 List<Widget> castAndCrew({
   required Movie movie,

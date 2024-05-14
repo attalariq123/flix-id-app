@@ -1,13 +1,13 @@
-import 'package:flix_id/domain/entities/movie_detail.dart';
-import 'package:flix_id/domain/entities/transaction.dart';
-import 'package:flix_id/presentation/extensions/build_context_extension.dart';
-import 'package:flix_id/presentation/misc/constants.dart';
-import 'package:flix_id/presentation/misc/methods.dart';
-import 'package:flix_id/presentation/pages/schedule_booking_page/methods/options.dart';
-import 'package:flix_id/presentation/providers/router/router_provider.dart';
-import 'package:flix_id/presentation/providers/user_data/user_data_provider.dart';
-import 'package:flix_id/presentation/widgets/back_navigation_bar.dart';
-import 'package:flix_id/presentation/widgets/network_image_card.dart';
+import '../../../domain/entities/movie_detail.dart';
+import '../../../domain/entities/transaction.dart';
+import '../../extensions/build_context_extension.dart';
+import '../../misc/constants.dart';
+import '../../misc/methods.dart';
+import 'methods/options.dart';
+import '../../providers/router/router_provider.dart';
+import '../../providers/user_data/user_data_provider.dart';
+import '../../widgets/back_navigation_bar.dart';
+import '../../widgets/network_image_card.dart';
 import 'package:intl/intl.dart';
 
 import '../../widgets/selectable_card.dart';

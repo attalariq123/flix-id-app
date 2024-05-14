@@ -1,11 +1,12 @@
 import 'dart:math';
 
-import 'package:flix_id/presentation/misc/constants.dart';
-import 'package:flix_id/presentation/misc/methods.dart';
-import 'package:flix_id/presentation/pages/seat_booking_page/methods/legend.dart';
-import 'package:flix_id/presentation/pages/seat_booking_page/methods/movie_screen.dart';
-import 'package:flix_id/presentation/pages/seat_booking_page/methods/seat_section.dart';
-import 'package:flix_id/presentation/widgets/seat.dart';
+import '../../extensions/build_context_extension.dart';
+import '../../misc/constants.dart';
+import '../../misc/methods.dart';
+import 'methods/legend.dart';
+import 'methods/movie_screen.dart';
+import 'methods/seat_section.dart';
+import '../../widgets/seat.dart';
 
 import '../../../domain/entities/movie_detail.dart';
 import '../../../domain/entities/transaction.dart';
@@ -106,7 +107,23 @@ class _SeatBookingPageState extends ConsumerState<SeatBookingPage> {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      if (selectedSeats.isEmpty) {
+                        context.showSnackBar('Please select at least one seat');
+                      } else {
+                        var updatedTransaction = transaction.copyWith(
+                          seats:
+                              (selectedSeats..sort()).map((e) => '$e').toList(),
+                          ticketAmount: selectedSeats.length,
+                          ticketPrice: 25000,
+                        );
+
+                        ref.read(routerProvider).pushNamed(
+                          'booking-confirmation',
+                          extra: (movieDetail, updatedTransaction),
+                        );
+                      }
+                    },
                     style: ElevatedButton.styleFrom(
                         backgroundColor: saffron,
                         foregroundColor: backgroundColor,

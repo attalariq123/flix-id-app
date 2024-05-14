@@ -1,8 +1,8 @@
 import '../../../data/repositories/movie_repository.dart';
 import '../../entities/movie_detail.dart';
 import '../../entities/result.dart';
-import 'get_movie_detail_param.dart';
 import '../usecase.dart';
+import 'get_movie_detail_param.dart';
 
 class GetMovieDetail
     implements UseCase<Result<MovieDetail>, GetMovieDetailParam> {

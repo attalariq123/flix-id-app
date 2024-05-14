@@ -1,4 +1,4 @@
-import 'package:flix_id/presentation/misc/constants.dart';
+import '../misc/constants.dart';
 import 'package:flutter/material.dart';
 
 enum SeatStatus { available, reserved, selected }

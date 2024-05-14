@@ -1,8 +1,8 @@
 import '../../../data/repositories/user_repository.dart';
 import '../../entities/result.dart';
 import '../../entities/user.dart';
-import 'upload_profile_picture_param.dart';
 import '../usecase.dart';
+import 'upload_profile_picture_param.dart';
 
 class UploadProfilePicture
     implements UseCase<Result<User>, UploadProfilePictureParam> {

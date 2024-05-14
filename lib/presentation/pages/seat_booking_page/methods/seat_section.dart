@@ -1,4 +1,4 @@
-import 'package:flix_id/presentation/widgets/seat.dart';
+import '../../../widgets/seat.dart';
 import 'package:flutter/material.dart';
 
 Widget seatSection({

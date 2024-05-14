@@ -1,11 +1,12 @@
 import 'dart:io';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import '../repositories/user_repository.dart';
+import 'package:path/path.dart';
+
 import '../../domain/entities/result.dart';
 import '../../domain/entities/user.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:path/path.dart';
+import '../repositories/user_repository.dart';
 
 class FirebaseUserRepository implements UserRepository {
   final FirebaseFirestore _firebaseFirestore;
