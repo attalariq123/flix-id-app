@@ -1,10 +1,11 @@
-import 'package:flix_id/presentation/misc/methods.dart';
-import 'package:flix_id/presentation/pages/movie_page/methods/movie_list.dart';
-import 'package:flix_id/presentation/pages/movie_page/methods/promotion_list.dart';
-import 'package:flix_id/presentation/pages/movie_page/methods/search_bar.dart';
-import 'package:flix_id/presentation/pages/movie_page/methods/user_info.dart';
-import 'package:flix_id/presentation/providers/movies/now_playing_provider.dart';
-import 'package:flix_id/presentation/providers/movies/upcoming_provider.dart';
+import '../../misc/methods.dart';
+import 'methods/movie_list.dart';
+import 'methods/promotion_list.dart';
+import 'methods/search_bar.dart';
+import 'methods/user_info.dart';
+import '../../providers/movies/now_playing_provider.dart';
+import '../../providers/movies/upcoming_provider.dart';
+import '../../providers/router/router_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -30,9 +31,8 @@ class MoviePage extends ConsumerWidget {
             ...movieList(
               title: 'Now Playing',
               movies: ref.watch(nowPlayingProvider),
-              onTap: (movie) {
-                // TODO: Move to movie detail page
-              },
+              onTap: (movie) =>
+                  ref.watch(routerProvider).pushNamed('detail', extra: movie),
             ),
             verticalSpace(30.0),
             ...promotionList(promotionImageFile),
@@ -40,6 +40,8 @@ class MoviePage extends ConsumerWidget {
             ...movieList(
               title: 'Upcoming',
               movies: ref.watch(upcomingProvider),
+              onTap: (movie) =>
+                  ref.watch(routerProvider).pushNamed('detail', extra: movie),
             ),
             verticalSpace(100.0),
           ],

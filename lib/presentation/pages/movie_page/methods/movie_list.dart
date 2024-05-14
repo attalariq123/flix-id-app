@@ -1,5 +1,5 @@
-import 'package:flix_id/domain/entities/movie.dart';
-import 'package:flix_id/presentation/widgets/network_image_card.dart';
+import '../../../../domain/entities/movie.dart';
+import '../../../widgets/network_image_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';

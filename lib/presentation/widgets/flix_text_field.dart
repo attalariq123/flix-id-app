@@ -1,4 +1,4 @@
-import '../misc/constant.dart';
+import '../misc/constants.dart';
 import 'package:flutter/material.dart';
 
 class FlixTextField extends StatelessWidget {

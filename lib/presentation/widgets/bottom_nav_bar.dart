@@ -1,5 +1,6 @@
-import 'bottom_nav_bar_item.dart';
 import 'package:flutter/material.dart';
+
+import 'bottom_nav_bar_item.dart';
 
 class BottomNavBar extends StatelessWidget {
   final List<BottomNavBarItem> items;

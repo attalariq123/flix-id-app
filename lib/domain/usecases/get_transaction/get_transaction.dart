@@ -1,8 +1,8 @@
 import '../../../data/repositories/transaction_repository.dart';
 import '../../entities/result.dart';
 import '../../entities/transaction.dart';
-import 'get_transaction_param.dart';
 import '../usecase.dart';
+import 'get_transaction_param.dart';
 
 class GetTransaction
     implements UseCase<Result<List<Transaction>>, GetTransactionParam> {

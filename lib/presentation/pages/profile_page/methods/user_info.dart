@@ -1,5 +1,5 @@
-import 'package:flix_id/presentation/misc/methods.dart';
-import 'package:flix_id/presentation/providers/user_data/user_data_provider.dart';
+import '../../../misc/methods.dart';
+import '../../../providers/user_data/user_data_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

@@ -1,10 +1,11 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 import '../../extensions/build_context_extension.dart';
 import '../../misc/methods.dart';
 import '../../providers/router/router_provider.dart';
 import '../../providers/user_data/user_data_provider.dart';
 import '../../widgets/flix_text_field.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class LoginPage extends ConsumerWidget {
   final TextEditingController emailController = TextEditingController();

@@ -1,5 +1,5 @@
-import 'package:flix_id/presentation/misc/methods.dart';
-import 'package:flix_id/presentation/providers/user_data/user_data_provider.dart';
+import '../../misc/methods.dart';
+import '../../providers/user_data/user_data_provider.dart';
 
 import 'methods/profile_item.dart';
 import 'methods/user_info.dart';

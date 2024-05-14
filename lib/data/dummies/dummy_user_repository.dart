@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import '../repositories/user_repository.dart';
 import '../../domain/entities/result.dart';
 import '../../domain/entities/user.dart';
+import '../repositories/user_repository.dart';
 
 class DummyUserRepository implements UserRepository {
   @override

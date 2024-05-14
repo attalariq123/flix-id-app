@@ -1,9 +1,10 @@
 import 'package:dio/dio.dart';
-import '../repositories/movie_repository.dart';
+
 import '../../domain/entities/actor.dart';
 import '../../domain/entities/movie.dart';
 import '../../domain/entities/movie_detail.dart';
 import '../../domain/entities/result.dart';
+import '../repositories/movie_repository.dart';
 
 class TmdbMovieRepository implements MovieRepository {
   final Dio? _dio;

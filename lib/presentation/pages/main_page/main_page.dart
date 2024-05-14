@@ -1,4 +1,4 @@
-import 'package:flix_id/presentation/pages/movie_page/movie_page.dart';
+import '../movie_page/movie_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
