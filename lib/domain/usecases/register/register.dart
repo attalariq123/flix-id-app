@@ -2,8 +2,8 @@ import '../../../data/repositories/authentication.dart';
 import '../../../data/repositories/user_repository.dart';
 import '../../entities/result.dart';
 import '../../entities/user.dart';
-import 'register_param.dart';
 import '../usecase.dart';
+import 'register_param.dart';
 
 class Register implements UseCase<Result<User>, RegisterParam> {
   final Authentication _authentication;

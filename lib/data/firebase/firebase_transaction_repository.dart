@@ -1,9 +1,9 @@
-import 'firebase_user_repository.dart';
-import '../repositories/transaction_repository.dart';
+import 'package:cloud_firestore/cloud_firestore.dart' as firestore;
+
 import '../../domain/entities/result.dart';
 import '../../domain/entities/transaction.dart';
-
-import 'package:cloud_firestore/cloud_firestore.dart' as firestore;
+import '../repositories/transaction_repository.dart';
+import 'firebase_user_repository.dart';
 
 class FirebaseTransactionRepository implements TransactionRepository {
   final firestore.FirebaseFirestore _firebaseFirestore;

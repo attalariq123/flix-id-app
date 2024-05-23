@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
+
 import '../../../misc/methods.dart';
 import '../../../widgets/selectable_card.dart';
-import 'package:flutter/material.dart';
 
 List<Widget> options<T>({
   required String title,

@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
+
 import '../../../../domain/entities/movie.dart';
 import '../../../misc/constants.dart';
-import 'package:flutter/material.dart';
 
 List<Widget> background(Movie movie) => [
       Image.network(

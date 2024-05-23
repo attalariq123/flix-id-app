@@ -3,8 +3,8 @@ import '../../entities/result.dart';
 import '../../entities/transaction.dart';
 import '../create_transaction/create_transaction.dart';
 import '../create_transaction/create_transaction_param.dart';
-import 'top_up_param.dart';
 import '../usecase.dart';
+import 'top_up_param.dart';
 
 class TopUp implements UseCase<Result<void>, TopUpParam> {
   final TransactionRepository _transactionRepository;

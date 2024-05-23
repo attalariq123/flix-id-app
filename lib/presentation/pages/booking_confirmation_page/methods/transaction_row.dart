@@ -1,5 +1,6 @@
-import '../../../misc/methods.dart';
 import 'package:flutter/material.dart';
+
+import '../../../misc/methods.dart';
 
 Widget transactionRow({
   required String title,

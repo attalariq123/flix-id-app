@@ -1,11 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
-import 'presentation/misc/constants.dart';
-import 'presentation/providers/router/router_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'firebase_options.dart';
+import 'presentation/misc/constants.dart';
+import 'presentation/providers/router/router_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

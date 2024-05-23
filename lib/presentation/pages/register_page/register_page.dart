@@ -1,3 +1,7 @@
+import 'dart:io';
+
+import 'package:image_picker/image_picker.dart';
+
 import '../../extensions/build_context_extension.dart';
 import '../../misc/methods.dart';
 import '../../providers/router/router_provider.dart';
@@ -20,11 +24,25 @@ class _RegisterPageState extends ConsumerState<RegisterPage> {
       TextEditingController();
   final TextEditingController nameController = TextEditingController();
 
+  XFile? xfile;
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    retypePasswordController.dispose();
+    nameController.dispose();
+
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     ref.listen(userDataProvider, (previous, next) {
       if (next is AsyncData && next.value != null) {
-        ref.read(routerProvider).goNamed('main');
+        ref
+            .read(routerProvider)
+            .goNamed('main', extra: xfile != null ? File(xfile!.path) : null);
       } else if (next is AsyncError) {
         context.showSnackBar(next.error.toString());
       }
@@ -43,12 +61,24 @@ class _RegisterPageState extends ConsumerState<RegisterPage> {
                 ),
               ),
               verticalSpace(50),
-              const CircleAvatar(
-                radius: 50,
-                child: Icon(
-                  Icons.add_a_photo,
-                  size: 50,
-                  color: Colors.white,
+              GestureDetector(
+                onTap: () async {
+                  xfile = await ImagePicker()
+                      .pickImage(source: ImageSource.gallery);
+
+                  setState(() {});
+                },
+                child: CircleAvatar(
+                  radius: 50,
+                  backgroundImage:
+                      xfile != null ? FileImage(File(xfile!.path)) : null,
+                  child: xfile != null
+                      ? null
+                      : const Icon(
+                          Icons.add_a_photo,
+                          size: 50,
+                          color: Colors.white,
+                        ),
                 ),
               ),
               verticalSpace(24),

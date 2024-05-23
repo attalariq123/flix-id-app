@@ -1,3 +1,8 @@
+import 'dart:io';
+
+import '../../pages/profile_page/profile_page.dart';
+import '../../pages/wallet_page/wallet_page.dart';
+
 import '../../../domain/entities/movie_detail.dart';
 import '../../../domain/entities/transaction.dart';
 import '../../pages/booking_confirmation_page/booking_confirmation_page.dart';
@@ -21,7 +26,9 @@ Raw<GoRouter> router(RouterRef ref) => GoRouter(
         GoRoute(
           path: '/main',
           name: 'main',
-          builder: (context, state) => const MainPage(),
+          builder: (context, state) => MainPage(
+            imageFile: state.extra != null ? state.extra as File : null,
+          ),
         ),
         GoRoute(
           path: '/login',
@@ -59,6 +66,18 @@ Raw<GoRouter> router(RouterRef ref) => GoRouter(
           builder: (context, state) => BookingConfirmationPage(
             transactionDetail: state.extra as (MovieDetail, Transaction),
           ),
+        ),
+        GoRoute(
+          path: '/profile',
+          name: 'profile',
+          builder: (context, state) => ProfilePage(
+            canPop: state.extra as bool,
+          ),
+        ),
+        GoRoute(
+          path: '/wallet',
+          name: 'wallet',
+          builder: (context, state) => const WalletPage(),
         ),
       ],
       initialLocation: '/login',

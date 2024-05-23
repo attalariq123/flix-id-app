@@ -1,5 +1,5 @@
-import '../repositories/authentication.dart';
 import '../../domain/entities/result.dart';
+import '../repositories/authentication.dart';
 
 class DummyAuthentication implements Authentication {
   @override

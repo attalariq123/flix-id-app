@@ -1,8 +1,8 @@
 import '../../../data/repositories/movie_repository.dart';
 import '../../entities/actor.dart';
 import '../../entities/result.dart';
-import 'get_actors_param.dart';
 import '../usecase.dart';
+import 'get_actors_param.dart';
 
 class GetActors implements UseCase<Result<List<Actor>>, GetActorsParam> {
   final MovieRepository _movieRepository;

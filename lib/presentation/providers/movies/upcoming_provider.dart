@@ -1,9 +1,10 @@
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+
 import '../../../domain/entities/movie.dart';
 import '../../../domain/entities/result.dart';
 import '../../../domain/usecases/get_movie_list/get_movie_list.dart';
 import '../../../domain/usecases/get_movie_list/get_movie_list_param.dart';
 import '../usecase/get_movie_list_provider.dart';
-import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'upcoming_provider.g.dart';
 

@@ -1,19 +1,19 @@
 import 'dart:math';
 
-import '../../extensions/build_context_extension.dart';
-import '../../misc/constants.dart';
-import '../../misc/methods.dart';
-import 'methods/legend.dart';
-import 'methods/movie_screen.dart';
-import 'methods/seat_section.dart';
-import '../../widgets/seat.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../domain/entities/movie_detail.dart';
 import '../../../domain/entities/transaction.dart';
+import '../../extensions/build_context_extension.dart';
+import '../../misc/constants.dart';
+import '../../misc/methods.dart';
 import '../../providers/router/router_provider.dart';
 import '../../widgets/back_navigation_bar.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../widgets/seat.dart';
+import 'methods/legend.dart';
+import 'methods/movie_screen.dart';
+import 'methods/seat_section.dart';
 
 class SeatBookingPage extends ConsumerStatefulWidget {
   final (MovieDetail, Transaction) transactionDetail;
@@ -44,7 +44,7 @@ class _SeatBookingPageState extends ConsumerState<SeatBookingPage> {
   }
 
   void onSeatTap(number) {
-    if (!selectedSeats.contains(number)) {
+    if (!selectedSeats.contains(number) && !reservedSeats.contains(number)) {
       setState(() {
         selectedSeats.add(number);
       });
